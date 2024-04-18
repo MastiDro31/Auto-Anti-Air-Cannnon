@@ -17,7 +17,7 @@ p.setTargetSpeed(0)
 y.setTargetSpeed(0)
 local current_look = {yaw = start_yaw, pitch = start_pitch}
 local plr_scaner = peripheral.wrap("left") -- Сканер игроков (mod: Advanced Peripherals)
-local chat = peripheral.wrap("bottom") -- Сканер игроков (mod: Advanced Peripherals)
+--local chat = peripheral.wrap("bottom") -- Чат для вывода данных (mod: Advanced Peripherals)
 local old_y_speed = 0.1
 local old_p_speed = 0.1
 
