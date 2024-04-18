@@ -1,3 +1,10 @@
 # Building
 
 ### LAYER 1
+![LAYER1](https://cdn.discordapp.com/attachments/880878896470446120/1230515033352704061/image.png?ex=6633996d&is=6621246d&hm=2a32c043ba80cf3ce5ea74ff9ab188adf8429b4ef7def8705f85da4ee464e136&)
+### LAYER 2
+![LAYER2](https://cdn.discordapp.com/attachments/880878896470446120/1230514949994975252/image.png?ex=66339959&is=66212459&hm=f38502ed54503db7405ea2ed759f26110c309ca2d3e437bb6eedeab9fca9fa70&)
+### LAYER 3
+![LAYER3](https://cdn.discordapp.com/attachments/880878896470446120/1230514897926750258/image.png?ex=6633994d&is=6621244d&hm=5b74d7ae478ef3041d8e5e4e5137890b263c5c79c9233909e0bb00ee1cc00e51&)
+### LAYER 4
+![LAYER4](https://cdn.discordapp.com/attachments/880878896470446120/1230514802116263966/image.png?ex=66339936&is=66212436&hm=216744f23b4413e60fa61a88067e73d393e7597990c6ec146f2d8f938b246395&)
