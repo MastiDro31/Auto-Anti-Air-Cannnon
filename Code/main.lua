@@ -1,6 +1,8 @@
 --[[
     Код для пушки из видео: https://www.youtube.com/watch?v=Rn7dKYUX3zQ
-    Страница github: 
+    Страница github: https://github.com/MastiDro31/Auto-Anti-Air-Cannnon/blob/main
+    Автор: Masti (MastiDro31)
+    Discord: _masti.
 ]]
 ----------------------Settings----------------------
 local cannon_pos = {x = 11.5, y = 4.5, z = -4.5}
@@ -8,13 +10,14 @@ local start_yaw = 90  -- В какую сторону света смотрит 
 local start_pitch = 0 -- В какую сторону по вертикали смотрит пушка [ (0):Прямо, (90):Верх, (-90):Вниз ]
 ----------------------Settings----------------------
 ----------------------------------------------------
-local rotate_ratio = (26 + (2/3))/1 -- Соотношение RPM к градусам поворота в тик
+local rotate_ratio = 26 + (2/3) -- Соотношение RPM к градусам поворота в тик
 local y = peripheral.wrap("right") -- Регулятор скорости для yaw
 local p = peripheral.wrap("top") -- Регулятор скорости для pitch
 p.setTargetSpeed(0)
 y.setTargetSpeed(0)
 local current_look = {yaw = start_yaw, pitch = start_pitch}
 local plr_scaner = peripheral.wrap("left") -- Сканер игроков (mod: Advanced Peripherals)
+local chat = peripheral.wrap("bottom") -- Сканер игроков (mod: Advanced Peripherals)
 local old_y_speed = 0.1
 local old_p_speed = 0.1
 
@@ -40,7 +43,7 @@ local function turn(yaw,pitch)
     if yaw ~= 0 then y.setTargetSpeed(y_speed) end -- Если yaw нужно изменить
     if pitch ~= 0 then p.setTargetSpeed(p_speed) end -- Если pitch нужно изменить
     for i=1,11 do  ----------
-        os.sleep() -- ждать 12 тиков
+        os.sleep() -- ждать 11 тиков
     end            ----------
     if yaw ~= 0 then y.setTargetSpeed(0) end -- Если yaw крутился
     if pitch ~= 0 then p.setTargetSpeed(0) end -- Если pitch крутился
@@ -49,9 +52,11 @@ local function turn(yaw,pitch)
 end
 
 local function get_offset(look_from, look_to) -- Для определения на сколько нужно повернуть пушку
+    local yaw = look_to.yaw - look_from.yaw
+    local pitch = look_to.pitch - look_from.pitch
     return {
-        yaw = look_to.yaw - look_from.yaw,
-        pitch = look_to.pitch - look_from.pitch}
+        yaw = yaw,
+        pitch = pitch}
 end
 local function get_distance(from, to) -- На будующее чтобы пушка не целилась на цели по которым она не достанет
     local dist = math.pow(from.x - to.x,2) +
